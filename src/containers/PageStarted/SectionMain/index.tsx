@@ -141,7 +141,7 @@ const SectionMain: React.FC = () => {
           <S.CardsContainerCol md={12} lg={8}>
             <S.CardsRow>
               <Col xs={12} md={6}>
-                <CardBoxLink color="accent" text={cardFourVerify} link="#"/><span>TODO ADD SIGNED MESSAGE. TODO FIX WIDTH</span>
+                <CardBoxLink color="accent" text={cardFourVerify} link="#"/><span>TODO ADD SIGNED MESSAGE. TODO FIX WIDTH. TODO use https://developer.twitter.com/en/docs/twitter-for-websites/tweet-button/overview</span>
               </Col>
             </S.CardsRow>
           </S.CardsContainerCol>
