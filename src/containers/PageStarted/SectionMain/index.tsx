@@ -43,35 +43,30 @@ const SectionMain: React.FC = () => {
 
   const [
     titleOne,
-    officialWalletTitle,
-    officialWalletSubtitle,
-    altWalletTitle,
-    altWalletSubtitle,
     titleTwo,
-    cardTitleOne,
-    cardTitleTwo,
-    cardTitleThree,
+    titleThree,
     titleFour,
     cardOnePk,
     cardOneSk,
+    cardTwoKYD,
+    cardThreeFollow,
+    cardFourVerify,
   ] = useFormatMessages([
     { id: "GUIDE_STEP_1_SECTION_TITLE" },
-    { id: "WALLET_OFFICIAL_TITLE" },
-    { id: "WALLET_OFFICIAL_SUBTITLE" },
-    { id: "WALLET_ALT_TITLE" },
-    { id: "WALLET_ALT_SUBTITLE" },
     { id: "GUIDE_STEP_2_SECTION_TITLE" },
-    { id: "GUIDE_STEP_3_CARD_ONE" },
-    { id: "GUIDE_STEP_3_CARD_TWO" },
-    { id: "GUIDE_STEP_3_CARD_THREE" },
+    { id: "GUIDE_STEP_3_SECTION_TITLE" },
     { id: "GUIDE_STEP_4_SECTION_TITLE" },
     { id: "GUIDE_STEP_1_CARD_PK" },
     { id: "GUIDE_STEP_1_CARD_SK" },
+    { id: "GUIDE_STEP_2_CARD_KYD" },
+    { id: "GUIDE_STEP_3_CARD_FOLLOW" },
+    { id: "GUIDE_STEP_4_CARD_VERIFY" },
   ])
 
   return (
     <S.SectionWrapper>
-      <Section as={S.RadiusWrapper}>
+
+      <Section as={S.Wrapper}>
         {!isMobile && (
           <S.DecorWrapper>
             <PathLine $type={2} />
@@ -83,14 +78,14 @@ const SectionMain: React.FC = () => {
           <S.CardsContainerCol md={12} lg={8}>
             <S.CardsRow>
               <Col xs={12} md={6}>
-                <CardBoxLink color="accent" text={cardOnePk} link="#"/>
+                <CardBoxLink color="accent" text={cardOnePk} link="#"/><span>TODO ADD PK logic</span>
               </Col>
               <Col xs={12} md={6}>
                 <CardBoxLink
                   color="black"
                   text={cardOneSk}
                   link="#"
-                />
+                /><span>TODO ADD SK logic</span>
               </Col>
             </S.CardsRow>
           </S.CardsContainerCol>
@@ -105,16 +100,15 @@ const SectionMain: React.FC = () => {
         )}
 
         <BlockStepLead step={2} title={titleTwo} />
-        <TabsGroup
-          groups={[
-            {
-              buttonGroup: stepTwoButtons[0],
-            },
-            {
-              buttonGroup: stepTwoButtons[1],
-            },
-          ]}
-        />
+        <Row center="xs">
+          <S.CardsContainerCol md={12} lg={8}>
+            <S.CardsRow>
+              <Col xs={12} md={6}>
+                <CardBoxLink color="accent" text={cardTwoKYD} link="#"/><span>TODO ADD KYD PHOTO EXAMPLE</span>
+              </Col>
+            </S.CardsRow>
+          </S.CardsContainerCol>
+        </Row>
       </Section>
 
       <Section as={S.Wrapper}>
@@ -124,22 +118,12 @@ const SectionMain: React.FC = () => {
           </S.DecorWrapper>
         )}
 
-        <BlockStepLead step={3} />
+        <BlockStepLead step={3} title={titleThree} />
         <Row center="xs">
           <S.CardsContainerCol md={12} lg={8}>
             <S.CardsRow>
               <Col xs={12} md={6}>
-                <CardBoxLink color="accent" text={cardTitleOne} link="https://bitpay.com/blog/spend-dogecoin/" />
-              </Col>
-              <Col xs={12} md={6}>
-                <CardBoxLink
-                  color="black"
-                  text={cardTitleTwo}
-                  link=" https://twitter.com/SnoopDogg/status/1375587797474504707"
-                />
-              </Col>
-              <Col xs={12} md={6}>
-                <CardBoxLink color="secondary" text={cardTitleThree} link="https://www.spendyourdogecoins.cf/" />
+                <CardBoxLink color="accent" text={cardThreeFollow} link="#"/><span>TODO ADD STATIC FOLLOW LINK</span>
               </Col>
             </S.CardsRow>
           </S.CardsContainerCol>
@@ -147,20 +131,24 @@ const SectionMain: React.FC = () => {
       </Section>
 
       <Section as={S.Wrapper}>
-        <BlockStepLead step={4} title={titleFour} />
+        {!isMobile && (
+          <S.DecorWrapper>
+            <PathLine $type={4} />
+          </S.DecorWrapper>
+        )}
 
+        <BlockStepLead step={4} title={titleFour} />
         <Row center="xs">
           <S.CardsContainerCol md={12} lg={8}>
-            <S.SocialCardsRow>
-              {stepFourLinks.map((card, index) => (
-                <Col xs={6} md={4} key={index}>
-                  <CardSocial type={card.type} link={card.link} icon={card.icon} />
-                </Col>
-              ))}
-            </S.SocialCardsRow>
+            <S.CardsRow>
+              <Col xs={12} md={6}>
+                <CardBoxLink color="accent" text={cardFourVerify} link="#"/><span>TODO ADD SIGNED MESSAGE</span>
+              </Col>
+            </S.CardsRow>
           </S.CardsContainerCol>
         </Row>
       </Section>
+
     </S.SectionWrapper>
   )
 }
