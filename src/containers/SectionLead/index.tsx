@@ -12,7 +12,8 @@ import ButtonOval from "../../components/ButtonOval"
 import OvalStroke from "../../assets/shapes/oval-stroke"
 import Oval from "../../assets/shapes/oval"
 import PathLine from "../../assets/shapes/path-line"
-import { IconPlay } from "../../icons"
+import { IconPlay, IconTwitter, IconGithub } from "../../icons"
+
 
 import * as S from "./styled"
 
@@ -69,11 +70,10 @@ const SectionLead: React.FC = () => {
             />
             <ButtonOval
               text={videoText}
-              icon={<IconPlay />}
               shapeType="video-play"
               shapeColor="#98EDE3"
               shapeRotate={170}
-              href="https://youtu.be/_KVZmS_UO5I"
+              href="getting-started"
             />
           </S.ShapesWrapper>
         </Col>

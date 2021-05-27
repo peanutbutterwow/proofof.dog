@@ -2,7 +2,7 @@ import React from "react"
 
 import Oval from "../../assets/shapes/oval"
 import { useFormatMessages } from "../../utils/hooks"
-import { IconCart, IconWallet, IconDownload, IconKey } from "../../icons"
+import { IconCart, IconWallet, IconInstagram, IconTwitter, IconDownload, IconKey } from "../../icons"
 
 import * as S from "./styled"
 
@@ -27,11 +27,11 @@ const OvalShape: React.FC<{ step: number }> = ({ step }) => {
 const Icon: React.FC<{ step: number }> = ({ step }) => {
   switch (step) {
     case 1:
-      return <IconKey />
-    case 2:
       return <IconWallet />
+    case 2:
+      return <IconInstagram />
     case 3:
-      return <IconCart />
+      return <IconTwitter />
     case 4:
       return <IconDownload />
     default:

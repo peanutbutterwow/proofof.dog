@@ -52,6 +52,8 @@ const SectionMain: React.FC = () => {
     cardTitleTwo,
     cardTitleThree,
     titleFour,
+    cardOnePk,
+    cardOneSk,
   ] = useFormatMessages([
     { id: "GUIDE_STEP_1_SECTION_TITLE" },
     { id: "WALLET_OFFICIAL_TITLE" },
@@ -63,6 +65,8 @@ const SectionMain: React.FC = () => {
     { id: "GUIDE_STEP_3_CARD_TWO" },
     { id: "GUIDE_STEP_3_CARD_THREE" },
     { id: "GUIDE_STEP_4_SECTION_TITLE" },
+    { id: "GUIDE_STEP_1_CARD_PK" },
+    { id: "GUIDE_STEP_1_CARD_SK" },
   ])
 
   return (
@@ -75,20 +79,22 @@ const SectionMain: React.FC = () => {
         )}
 
         <BlockStepLead step={1} title={titleOne} />
-        <TabsGroup
-          groups={[
-            {
-              title: officialWalletTitle,
-              subtitle: officialWalletSubtitle,
-              buttonGroup: stepOneButtons[0],
-            },
-            {
-              title: altWalletTitle,
-              subtitle: altWalletSubtitle,
-              buttonGroup: stepOneButtons[1],
-            },
-          ]}
-        />
+        <Row center="xs">
+          <S.CardsContainerCol md={12} lg={8}>
+            <S.CardsRow>
+              <Col xs={12} md={6}>
+                <CardBoxLink color="accent" text={cardOnePk} link="#"/>
+              </Col>
+              <Col xs={12} md={6}>
+                <CardBoxLink
+                  color="black"
+                  text={cardOneSk}
+                  link="#"
+                />
+              </Col>
+            </S.CardsRow>
+          </S.CardsContainerCol>
+        </Row>
       </Section>
 
       <Section as={S.Wrapper}>

@@ -1,7 +1,7 @@
 export default {
   ABOUT_TITLE: "<span>The future of<br/>Dog Finance</span>",
   LEAD_BUTTON_TEXT_1: "Let’s Wow",
-  LEAD_BUTTON_TEXT_2: "Video",
+  LEAD_BUTTON_TEXT_2: "Start Now",
   ABOUT_TEXT_LEAD: "1B doge want hodl, shibe need loot.",
   ABOUT_TEXT:
     "<p>Of the 471 million pet dogs in the world, fewer than 0.001% have their own bank accounts. That’s not even counting the other 421 million free-range dogs that remain not only unbanked, but also outside the domestication system. There are nearly <span style=\"font-weight:bold; color:#FFDD03\">one billion unbanked dogs</span>.</p><p><u>Proof-of-Dog brings social justice to all dogs</u>.</p><p>When you <a style=\"font-weight:bold; color:#FFDD03\" href=\"https://en.wikipedia.org/wiki/Know_your_customer\">#KYD</a> (know your doge), you create a Dogecoin address for your pup, and link it to your Twitter profile.</p><p>As a responsible dog owner, you want your beloved dog to stay healthy and happy by giving them proper documentation and the best financial tools available.</p><p>Dogecoin is money for dogs, and <span style=\"font-weight:bold;color:#FFDD02\">#proofOfDog</span> is the future.</p>",
@@ -9,7 +9,8 @@ export default {
   GUIDE_STEP_1_SUBTITLE: "STEP 1",
   GUIDE_STEP_1_TITLE: "Make a QR code wallet",
   GUIDE_STEP_1_SECTION_TITLE: "Make a unique Dogecoin address",
-  GUIDE_STEP_1_CARD_ONE: "CARD ONE",
+  GUIDE_STEP_1_CARD_PK: "This is your Public Key. Take doge pic with this one to KYD",
+  GUIDE_STEP_1_CARD_SK: "This is your Private Key. Keep it secret and safe!",
 
   GUIDE_STEP_2_SUBTITLE: "STEP 2",
   GUIDE_STEP_2_TITLE: "Take a pic of your doge with the QR",
@@ -24,8 +25,7 @@ export default {
 
   GUIDE_STEP_4_SUBTITLE: "STEP 4",
   GUIDE_STEP_4_TITLE: "Stay Up-to-Date",
-  GUIDE_STEP_4_SECTION_TITLE:
-    "There are many communities you can join to meet other Dogecoin enthusiasts and get the latest info",
+  GUIDE_STEP_4_SECTION_TITLE: "Follow @proofofdog on Twitter",
 
   GUIDE_CTA_TEXT: "Getting Started Guide",
   GETTING_STARTED_TITLE: "Getting Started",
@@ -44,13 +44,8 @@ export default {
   MEME_JOAN_ALT: "JoanOfDoge",
   MEME_DOGEUS_ALT: "Dogeus",
   MEME_DOGETO_ALT: "Dogeto",
-  WALLET_OFFICIAL_TITLE: "Private Key",
-  WALLET_OFFICIAL_SUBTITLE: "Keep it secret! Keep it safe!",
-  WALLET_ALT_TITLE: "Public Key",
-  WALLET_ALT_SUBTITLE: "Take your selfie with this one to KYD",
   GET_STARTED_TITLE: "Getting Started",
   GET_STARTED_SUBTITLE: "It is very easy to give your doge Dogecoin",
-  FOOTER_TEXT_US: "Have questions? Text us.",
   FOOTER_FOLLOW_US: "Follow us",
   FOOTER_OR: "or",
 }
