@@ -104,7 +104,7 @@ const SectionMain: React.FC = () => {
           <S.CardsContainerCol md={12} lg={8}>
             <S.CardsRow>
               <Col xs={12} md={6}>
-                <CardBoxLink color="accent" text={cardTwoKYD} link="#"/><span>TODO ADD KYD PHOTO EXAMPLE</span>
+                <CardBoxLink color="accent" text={cardTwoKYD} link="#"/><span>TODO ADD KYD PHOTO EXAMPLE. TODO MAKE FULL WIDTH</span>
               </Col>
             </S.CardsRow>
           </S.CardsContainerCol>
@@ -123,7 +123,7 @@ const SectionMain: React.FC = () => {
           <S.CardsContainerCol md={12} lg={8}>
             <S.CardsRow>
               <Col xs={12} md={6}>
-                <CardBoxLink color="accent" text={cardThreeFollow} link="#"/><span>TODO ADD STATIC FOLLOW LINK</span>
+                <CardBoxLink color="accent" text={cardThreeFollow} link="#"/><span>TODO ADD STATIC FOLLOW LINK. TODO MAKE FULL WIDTH</span>
               </Col>
             </S.CardsRow>
           </S.CardsContainerCol>
@@ -142,7 +142,7 @@ const SectionMain: React.FC = () => {
           <S.CardsContainerCol md={12} lg={8}>
             <S.CardsRow>
               <Col xs={12} md={6}>
-                <CardBoxLink color="accent" text={cardFourVerify} link="#"/><span>TODO ADD SIGNED MESSAGE</span>
+                <CardBoxLink color="accent" text={cardFourVerify} link="#"/><span>TODO ADD SIGNED MESSAGE. TODO MAKE FULL WIDTH</span>
               </Col>
             </S.CardsRow>
           </S.CardsContainerCol>
