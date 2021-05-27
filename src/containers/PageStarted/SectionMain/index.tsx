@@ -78,14 +78,14 @@ const SectionMain: React.FC = () => {
           <S.CardsContainerCol md={12} lg={8}>
             <S.CardsRow>
               <Col xs={12} md={6}>
-                <CardBoxLink color="accent" text={cardOnePk} link="#"/><span>TODO ADD PK logic</span>
+                <CardBoxLink color="accent" text={cardOnePk} link="#"/><span>TODO ADD PK logic. TODO FIX WIDTH</span>
               </Col>
               <Col xs={12} md={6}>
                 <CardBoxLink
                   color="black"
                   text={cardOneSk}
                   link="#"
-                /><span>TODO ADD SK logic</span>
+                /><span>TODO ADD SK logic. TODO FIX WIDTH</span>
               </Col>
             </S.CardsRow>
           </S.CardsContainerCol>
@@ -104,7 +104,7 @@ const SectionMain: React.FC = () => {
           <S.CardsContainerCol md={12} lg={8}>
             <S.CardsRow>
               <Col xs={12} md={6}>
-                <CardBoxLink color="accent" text={cardTwoKYD} link="#"/><span>TODO ADD KYD PHOTO EXAMPLE. TODO MAKE FULL WIDTH</span>
+                <CardBoxLink color="accent" text={cardTwoKYD} link="#"/><span>TODO ADD KYD PHOTO EXAMPLE. TODO FIX WIDTH</span>
               </Col>
             </S.CardsRow>
           </S.CardsContainerCol>
@@ -117,13 +117,12 @@ const SectionMain: React.FC = () => {
             <PathLine $type={4} />
           </S.DecorWrapper>
         )}
-
         <BlockStepLead step={3} title={titleThree} />
         <Row center="xs">
           <S.CardsContainerCol md={12} lg={8}>
             <S.CardsRow>
               <Col xs={12} md={6}>
-                <CardBoxLink color="accent" text={cardThreeFollow} link="#"/><span>TODO ADD STATIC FOLLOW LINK. TODO MAKE FULL WIDTH</span>
+                <CardBoxLink color="accent" text={cardThreeFollow} link="https://twitter.com/proofofdog"/><span>TODO FIX WIDTH. TODO MAKE TWITTER INLINE FOLLOW LINK WORK SEE https://publish.twitter.com/?buttonLarge=on&buttonType=FollowButton&dnt=1&query=%40proofOfDog&widget=Button</span>
               </Col>
             </S.CardsRow>
           </S.CardsContainerCol>
@@ -142,7 +141,7 @@ const SectionMain: React.FC = () => {
           <S.CardsContainerCol md={12} lg={8}>
             <S.CardsRow>
               <Col xs={12} md={6}>
-                <CardBoxLink color="accent" text={cardFourVerify} link="#"/><span>TODO ADD SIGNED MESSAGE. TODO MAKE FULL WIDTH</span>
+                <CardBoxLink color="accent" text={cardFourVerify} link="#"/><span>TODO ADD SIGNED MESSAGE. TODO FIX WIDTH</span>
               </Col>
             </S.CardsRow>
           </S.CardsContainerCol>
