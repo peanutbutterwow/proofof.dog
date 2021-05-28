@@ -7,6 +7,15 @@ import { ThemeProvider } from "styled-components"
 import { GlobalStyles } from "./GlobalStyles"
 
 import { DEFAULT_LANG } from "../utils/const"
+import en from "../config/locale/en-US.ts"
+import ru from "../config/locale/ru-RU.ts"
+import zh from "../config/locale/zh-CN.ts"
+const messages = {
+  'en': en,
+  'ru': ru,
+  'zh': zh,
+}
+const language = navigator.language.split(/[-_]/)[0];
 
 import locale from "../config/locale"
 import theme from "../config/styled/theme"
@@ -38,7 +47,7 @@ const Layout: React.FC<Props> = ({ title, description, isSimpleHeader = false, c
   const { title: defaultTitle, description: defaultDescription } = site.siteMetadata
 
   return (
-    <IntlProvider locale={DEFAULT_LANG} messages={locale[DEFAULT_LANG]}>
+    <IntlProvider locale={language} messages={messages[language]}>
       <Helmet>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
