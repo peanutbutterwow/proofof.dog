@@ -9,10 +9,8 @@ import Section from "../../components/Section"
 import QRCode from "../../components/QRCode"
 import * as S from "./styled"
 
-const SectionQRCode: React.FC = () => {
+const SectionQRCode: React.FC = ({ publicKey }) => {
   const [userInfo, setUserInfo] = useState(null)
-  const urlParams = new URLSearchParams(window.location.search)
-  const publicKey = urlParams.get('publicKey')
   const [
     tweetLinkText,
   ] = useFormatMessages([
