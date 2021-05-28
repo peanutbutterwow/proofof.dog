@@ -10,12 +10,21 @@ import { DEFAULT_LANG } from "../utils/const"
 import en from "../config/locale/en-US.ts"
 import ru from "../config/locale/ru-RU.ts"
 import zh from "../config/locale/zh-CN.ts"
-const messages = {
+
+const phrases = {
   'en': en,
   'ru': ru,
   'zh': zh,
 }
 const language = navigator.language.split(/[-_]/)[0];
+const messages = language === 'en' ? phrases['en'] : phrases[language];
+for (let k of new Map([en]).keys()) {
+  //TODO fix override logic from DEFAULT_LANG en-US
+  if (!new Map([messages]).has(k)) {
+    messages[k] = en[k]
+  }
+}
+
 
 import locale from "../config/locale"
 import theme from "../config/styled/theme"
@@ -47,7 +56,7 @@ const Layout: React.FC<Props> = ({ title, description, isSimpleHeader = false, c
   const { title: defaultTitle, description: defaultDescription } = site.siteMetadata
 
   return (
-    <IntlProvider locale={language} messages={messages[language]}>
+    <IntlProvider locale={language} messages={messages}>
       <Helmet>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
