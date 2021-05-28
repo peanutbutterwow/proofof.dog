@@ -1,7 +1,8 @@
 export default {
-  ABOUT_TITLE: "<span>Будущее<br/>Самоедские финансы</span>",
-  LEAD_BUTTON_TEXT_1: "Let’s Wow",
-  LEAD_BUTTON_TEXT_2: "Start Now",
+  ABOUT_TITLE: "<span>Будущее<br/>Самоедские<br/>финансы</span>",
+  MUCH_TEXT: "много",
+  LEAD_BUTTON_TEXT_1: "Давай вау",
+  LEAD_BUTTON_TEXT_2: "Начать сейчас",
   ABOUT_TEXT_LEAD: "1B doge want hodl, shibe need loot.",
   ABOUT_TEXT:
     "<p>Of the 471 million pet dogs in the world, fewer than 0.001% have their own bank accounts. That’s not even counting the other 421 million free-range dogs that remain not only unbanked, but also outside the domestication system. There are nearly <span style=\"font-weight:bold; color:#FFDD03\">one billion unbanked dogs</span>.</p><p><u>Proof-of-Dog brings social justice to all dogs</u>.</p><p>When you <a style=\"font-weight:bold; color:#FFDD03\" href=\"https://en.wikipedia.org/wiki/Know_your_customer\">#KYD</a> (know your doge), you create a Dogecoin address for your pup, and link it to your Twitter profile.</p><p>As a responsible dog owner, you want your beloved dog to stay healthy and happy by giving them proper documentation and the best financial tools available.</p><p>Dogecoin is money for dogs, and <span style=\"font-weight:bold;color:#FFDD02\">#proofOfDog</span> is the future.</p>",

@@ -1,5 +1,6 @@
 export default {
   ABOUT_TITLE: "<span>The future of<br/>Dog Finance</span>",
+  MUCH_TEXT: "Much",
   LEAD_BUTTON_TEXT_1: "Let’s Wow",
   LEAD_BUTTON_TEXT_2: "Start Now",
   ABOUT_TEXT_LEAD: "1B doge want hodl, shibe need loot.",
