@@ -162,3 +162,7 @@ export const DecorWrapper = styled(Decor)`
     left: calc(${rem(80)} / -2);
   }
 `
+
+export const Text = styled.p`
+  ${({ center }) => center && `text-align: center;`}
+`

@@ -19,7 +19,7 @@ interface ButtonProps {
   onClick?: Function | null
   anchor?: boolean
   bordered?: boolean
-  as?: any // TODO
+  as?: any // TODO // Need additional details
 }
 
 const Button: React.FC<ButtonProps> = ({

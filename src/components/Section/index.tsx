@@ -5,7 +5,7 @@ import * as S from "./styled"
 
 interface SectionProps {
   children: JSX.Element | JSX.Element[] | Node
-  as: any // TODO
+  as: any // TODO // Need additional detals
 }
 
 const Section: React.FC<SectionProps> = ({ children, as, ...rest }: SectionProps) => {

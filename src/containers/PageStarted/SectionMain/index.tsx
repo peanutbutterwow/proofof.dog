@@ -1,9 +1,13 @@
-import React from "react"
+import React, { useState } from "react"
 import { useMediaQuery } from "react-responsive"
 import { Row, Col } from "react-styled-flexboxgrid"
+import { StaticImage } from "gatsby-plugin-image"
+import { TwitterFollowButton } from 'react-twitter-embed';
 
 import { useFormatMessages } from "../../../utils/hooks"
 
+import PublicKeyTweet from "../../../components/PublicKeyTweet"
+import GenerateToken from "../../GenerateToken"
 import PathLine from "../../../assets/shapes/path-line"
 import Section from "../../../components/Section"
 import CardBoxLink from "../../../components/CardBoxLink"
@@ -39,6 +43,7 @@ const TabsGroup: React.FC<TabsGroupProps> = ({ groups }) => {
 }
 
 const SectionMain: React.FC = () => {
+  const [userInfo, setUserInfo] = useState(null)
   const isMobile = useMediaQuery({ maxWidth: 767 })
 
   const [
@@ -74,22 +79,7 @@ const SectionMain: React.FC = () => {
         )}
 
         <BlockStepLead step={1} title={titleOne} />
-        <Row center="xs">
-          <S.CardsContainerCol md={12} lg={8}>
-            <S.CardsRow>
-              <Col xs={12} md={6}>
-                <CardBoxLink color="accent" text={cardOnePk} link="#"/><span>TODO ADD PK logic. TODO FIX WIDTH</span>
-              </Col>
-              <Col xs={12} md={6}>
-                <CardBoxLink
-                  color="black"
-                  text={cardOneSk}
-                  link="#"
-                /><span>TODO ADD SK logic. TODO FIX WIDTH</span>
-              </Col>
-            </S.CardsRow>
-          </S.CardsContainerCol>
-        </Row>
+        <GenerateToken onGenerated={setUserInfo} />
       </Section>
 
       <Section as={S.Wrapper}>
@@ -101,10 +91,12 @@ const SectionMain: React.FC = () => {
 
         <BlockStepLead step={2} title={titleTwo} />
         <Row center="xs">
-          <S.CardsContainerCol md={12} lg={8}>
+          <S.CardsContainerCol md={12}>
             <S.CardsRow>
-              <Col xs={12} md={6}>
-                <CardBoxLink color="accent" text={cardTwoKYD} link="#"/><span>TODO ADD KYD PHOTO EXAMPLE. TODO FIX WIDTH</span>
+              <Col xs={12}>
+                <S.Text center>
+                  <img src="/images/kyd-example.jpg" alt="KYD Example" />
+                </S.Text>
               </Col>
             </S.CardsRow>
           </S.CardsContainerCol>
@@ -119,10 +111,15 @@ const SectionMain: React.FC = () => {
         )}
         <BlockStepLead step={3} title={titleThree} />
         <Row center="xs">
-          <S.CardsContainerCol md={12} lg={8}>
+          <S.CardsContainerCol md={12}>
             <S.CardsRow>
-              <Col xs={12} md={6}>
-                <CardBoxLink color="accent" text={cardThreeFollow} link="https://twitter.com/proofofdog"/><span>TODO FIX WIDTH. TODO MAKE TWITTER INLINE FOLLOW LINK WORK SEE https://publish.twitter.com/?buttonLarge=on&buttonType=FollowButton&dnt=1&query=%40proofOfDog&widget=Button</span>
+              <Col xs={12}>
+                <S.Text center>
+                  <TwitterFollowButton
+                    screenName={'proofOfDog'}
+                    options={{ size: 'large', showCount: false }}
+                  />
+                </S.Text>
               </Col>
             </S.CardsRow>
           </S.CardsContainerCol>
@@ -141,7 +138,7 @@ const SectionMain: React.FC = () => {
           <S.CardsContainerCol md={12} lg={8}>
             <S.CardsRow>
               <Col xs={12} md={6}>
-                <CardBoxLink color="accent" text={cardFourVerify} link="#"/><span>TODO ADD SIGNED MESSAGE. TODO FIX WIDTH. TODO use https://developer.twitter.com/en/docs/twitter-for-websites/tweet-button/overview</span>
+                {userInfo && (<PublicKeyTweet {...userInfo} />)}
               </Col>
             </S.CardsRow>
           </S.CardsContainerCol>
