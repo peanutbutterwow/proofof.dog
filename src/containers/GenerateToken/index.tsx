@@ -36,12 +36,15 @@ const GenerateToken: React.FC = ({
   const handleReset = () => setValues({ twitter: '', dogname: '' })
 
   const handleSubmit = () => {
+    window.location.href = '/create?twitter=' + values.twitter + '&dogname=' +values.dogname; 
+    /*
     axios.get('https://dogetag.dog/api/user', { params: values })
       .then(({ data }) => {
         setUserInfo(data)
         onGenerated(data)
       })
       .catch(error => console.log('ERROR', error))
+      */
   }
 
   return (
