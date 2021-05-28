@@ -17,8 +17,8 @@ const UserInfo: React.FC = ({
   twitterShare = false,
   username,
 }) => {
-  const publicKeyUrl = `https://dogetag.dog/addr?publicKey=${publicKey}`
-  const tweetMessage = `${dogname}'s #proofOfDog\n\n${message}\n\n#KYD\n\n`
+  const publicKeyUrl = `https://proofof.dog/addr?publicKey=${publicKey}`
+  const tweetMessage = `.@proofOfDog #KYD for ${dogname}\n\n${message}\n\n#proofOfDog\n\n`
   const [
     saveText,
     downloadText,
