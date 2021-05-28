@@ -13,13 +13,16 @@ const EmptyRow = styled.div`
   height: 114px;
 `
 
-const GettingStarted: React.FC = () => {
+const GettingStarted: React.FC = ({ location }) => {
+  const urlParams = new URLSearchParams(location.search)
+  const publicKey = urlParams.get('publicKey')
+
   return (
-    <Layout isSimpleHeader>
+    <Layout isSecondaryHeader>
       <Main>
         <Wrapper>
           <EmptyRow />
-          <SectionQRCode />
+          <SectionQRCode publicKey={publicKey} />
         </Wrapper>
       </Main>
     </Layout>

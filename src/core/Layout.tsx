@@ -35,11 +35,11 @@ import Footer from "../containers/Footer"
 interface Props {
   title?: string
   description?: string
-  isSimpleHeader?: boolean
+  isSecondaryHeader?: boolean
   children: JSX.Element | JSX.Element[]
 }
 
-const Layout: React.FC<Props> = ({ title, description, isSimpleHeader = false, children }: Props) => {
+const Layout: React.FC<Props> = ({ title, description, isSecondaryHeader = false, children }: Props) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -89,7 +89,7 @@ const Layout: React.FC<Props> = ({ title, description, isSimpleHeader = false, c
 
       <ThemeProvider theme={theme}>
         <GlobalStyles />
-        <Header isSimple={isSimpleHeader} />
+        <Header secondary={isSecondaryHeader} />
         {children}
         <Footer />
       </ThemeProvider>
