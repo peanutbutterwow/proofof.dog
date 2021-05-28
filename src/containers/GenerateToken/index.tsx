@@ -36,7 +36,7 @@ const GenerateToken: React.FC = ({
   const handleReset = () => setValues({ twitter: '', dogname: '' })
 
   const handleSubmit = () => {
-    window.location.href = '/create?twitter=' + values.twitter + '&dogname=' +values.dogname; 
+    window.location.href = '/getting-started?twitter=' + values.twitter + '&dogname=' +values.dogname; 
     /*
     axios.get('https://dogetag.dog/api/user', { params: values })
       .then(({ data }) => {
