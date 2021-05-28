@@ -15,7 +15,7 @@ const EmptyRow = styled.div`
 
 const GettingStarted: React.FC = () => {
   return (
-    <Layout isSimpleHeader>
+    <Layout isSecondaryHeader>
       <Main>
         <Wrapper>
           <EmptyRow />

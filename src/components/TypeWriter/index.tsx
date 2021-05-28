@@ -5,6 +5,7 @@ import Rect from "../../assets/shapes/rect-text.svg"
 import * as S from "./styled"
 
 // TODO: const wordsTop = ["Much", "Such", "Very", "So"]
+// Need additional details
 const wordsBottom = ["Doge", "Crypto", "Coin", "Hodl"]
 
 const TypeWriter: React.FC = () => {

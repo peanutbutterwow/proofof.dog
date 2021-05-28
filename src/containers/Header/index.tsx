@@ -8,14 +8,14 @@ import IconArrowBack from "../../icons/IconArrowBack"
 import * as S from "./styled"
 
 interface HeaderProps {
-  isSimple?: boolean // TODO: better naming when site scales
+  secondary?: boolean
 }
 
-const Header: React.FC<HeaderProps> = ({ isSimple = false }) => {
+const Header: React.FC<HeaderProps> = ({ secondary = false }) => {
   return (
     <S.Header>
       <CustomGrid>
-        {!isSimple && (
+        {!secondary && (
           <Row>
             <Col xs={4}>
               <S.Logo>
@@ -25,7 +25,7 @@ const Header: React.FC<HeaderProps> = ({ isSimple = false }) => {
             <Col xs={8}></Col>
           </Row>
         )}
-        {isSimple && (
+        {secondary && (
           <S.SimpleHeaderRow center="xs">
             <Col xs={4}>
               <Link to="/">
