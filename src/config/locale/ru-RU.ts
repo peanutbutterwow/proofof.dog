@@ -1,6 +1,5 @@
 export default {
   ABOUT_TITLE: "<span>Будущее<br/>финансов<br/>собак<br/>(питомцев)</span>",
-  MUCH_TEXT: "много",
   LEAD_BUTTON_TEXT_1: "Давай вау",
   LEAD_BUTTON_TEXT_2: "Начать сейчас",
   ABOUT_TEXT_LEAD: "1 млрд Доге хотят ходлить, самоедам нужно бабло.",
@@ -51,4 +50,12 @@ export default {
   FOOTER_OR: "или",
   BANNER_WOW: "much wow",
   BANNER_RANDOM: "such random",
+  TYPEWRITER_MUCH: "много",
+  TYPEWRITER_SUCH: "Such",
+  TYPEWRITER_VERY: "Very",
+  TYPEWRITER_SO: "So",
+  TYPEWRITER_DOGE: "Doge",
+  TYPEWRITER_CRYPTO: "Crypto",
+  TYPEWRITER_COIN: "Coin",
+  TYPEWRITER_HODL: "HODL",
 }

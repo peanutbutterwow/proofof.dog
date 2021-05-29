@@ -1,6 +1,5 @@
 export default {
   ABOUT_TITLE: "<span>The future of<br/>Dog Finance</span>",
-  MUCH_TEXT: "Much",
   LEAD_BUTTON_TEXT_1: "Let’s Wow",
   LEAD_BUTTON_TEXT_2: "Start Now",
   ABOUT_TEXT_LEAD: "1B doge want hodl, shibe need loot.",
@@ -74,4 +73,13 @@ export default {
   USER_CARD: "User card",
   BANNER_WOW: "much wow",
   BANNER_RANDOM: "such random",
+  TYPEWRITER_MUCH: "Much",
+  TYPEWRITER_SUCH: "Such",
+  TYPEWRITER_VERY: "Very",
+  TYPEWRITER_SO: "So",
+  TYPEWRITER_DOGE: "Doge",
+  TYPEWRITER_CRYPTO: "Crypto",
+  TYPEWRITER_COIN: "Coin",
+  TYPEWRITER_HODL: "HODL",
+
 }
