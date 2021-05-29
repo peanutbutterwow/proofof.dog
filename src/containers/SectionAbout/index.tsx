@@ -20,10 +20,12 @@ const hashtags = [
 ]
 
 const SectionAbout: React.FC = () => {
-  const [title, lead, text] = useFormatMessages([
+  const [title, lead, text, wow, random] = useFormatMessages([
     { id: "ABOUT_TITLE" },
     { id: "ABOUT_TEXT_LEAD" },
     { id: "ABOUT_TEXT" },
+    { id: "BANNER_WOW" },
+    { id: "BANNER_RANDOM" },
   ])
 
   return (
@@ -42,7 +44,7 @@ const SectionAbout: React.FC = () => {
       </Section>
 
       <S.BannerContainer>
-        <Banner texts={["much wow", "such random"]} />
+        <Banner texts={[wow, random]} />
       </S.BannerContainer>
 
       <Section as={S.WrapperLast}>
