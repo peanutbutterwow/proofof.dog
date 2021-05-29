@@ -49,4 +49,6 @@ export default {
   GET_STARTED_SUBTITLE: "Очень просто приобрести вашему Доге Dogecoin",
   FOOTER_FOLLOW_US: "Подписывайтесь",
   FOOTER_OR: "или",
+  BANNER_WOW: "much wow",
+  BANNER_RANDOM: "such random",
 }

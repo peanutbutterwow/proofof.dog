@@ -72,4 +72,6 @@ export default {
   TWEET_LINK: "Tweet link",
   TWEET_MESSAGE: "Tweet message",
   USER_CARD: "User card",
+  BANNER_WOW: "much wow",
+  BANNER_RANDOM: "such random",
 }
