@@ -74,4 +74,13 @@ export default {
   USER_CARD: "User card",
   BANNER_WOW: "much wow",
   BANNER_RANDOM: "such random",
+  TYPEWRITER_MUCH: "Much",
+  TYPEWRITER_SUCH: "Such",
+  TYPEWRITER_VERY: "Very",
+  TYPEWRITER_SO: "So",
+  TYPEWRITER_DOGE: "Doge",
+  TYPEWRITER_CRYPTO: "Crypto",
+  TYPEWRITER_COIN: "Coin",
+  TYPEWRITER_HODL: "HODL",
+
 }
