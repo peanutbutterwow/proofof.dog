@@ -1,5 +1,5 @@
 export default {
-  ABOUT_TITLE: "<span>Будущее<br/>финансов<br/>собак (питомцев) </span>",
+  ABOUT_TITLE: "<span>Будущее<br/>финансов<br/>собак<br/>(питомцев)</span>",
   MUCH_TEXT: "много",
   LEAD_BUTTON_TEXT_1: "Давай вау",
   LEAD_BUTTON_TEXT_2: "Начать сейчас",
