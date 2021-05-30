@@ -16,6 +16,7 @@ const UserInfo: React.FC = ({
   username,
 }) => {
   const publicKeyUrl = `https://proofof.dog/addr?publicKey=${publicKey}`
+  const tweetMessage = `.@proofOfDog #KYD for ${dogname}\n\n${message}\n\n#proofOfDog\n\n`
   const [
     saveText,
     downloadText,
