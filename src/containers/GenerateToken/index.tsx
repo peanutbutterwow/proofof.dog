@@ -36,7 +36,7 @@ const GenerateToken: React.FC = ({
   const handleReset = () => setValues({ twitter: '', dogname: '' })
 
   const handleSubmit = () => {
-    axios.get('https://proofof.dog/api/user', { params: values })
+    axios.get('https://proofof.dog/api/user', { params: values }) //TODO REMOVE THIS
       .then(({ data }) => {
         setUserInfo(data)
         onGenerated(data)
