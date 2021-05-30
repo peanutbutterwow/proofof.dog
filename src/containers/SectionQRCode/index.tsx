@@ -18,8 +18,14 @@ const SectionQRCode: React.FC = ({ publicKey }) => {
   ])
 
   useEffect(() => {
-    axios.get(`https://dogetag.dog/api/addr/${publicKey}`)
-      .then(({ data }) => setUserInfo(data))
+    axios.get(`https://proofof.dog/api/addr/${publicKey}`)
+      .then(({ data }) => {
+        if ( !data.error ) {
+          setUserInfo(data)
+        } else {
+          throw new Error(data.error)
+        }
+      })
       .catch(error => console.log('ERROR', error))
   }, [])
 

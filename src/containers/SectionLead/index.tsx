@@ -18,7 +18,7 @@ import { IconPlay, IconTwitter, IconGithub } from "../../icons"
 import * as S from "./styled"
 
 const SectionLead: React.FC = () => {
-  const [linkText, videoText] = useFormatMessages([{ id: "LEAD_BUTTON_TEXT_1" }, { id: "LEAD_BUTTON_TEXT_2" }])
+  const [linkText, videoText, muchText] = useFormatMessages([{ id: "LEAD_BUTTON_TEXT_1" }, { id: "LEAD_BUTTON_TEXT_2" }, { id: "MUCH_TEXT"}])
 
   return (
     <Section as={S.Wrapper}>
@@ -56,7 +56,7 @@ const SectionLead: React.FC = () => {
         </Col>
         <Col xs={12} sm={6}>
           <S.Title>
-            <span>Much</span>
+            <span>{muchText}</span>
             <TypeWriter />
           </S.Title>
           <S.ShapesWrapper>

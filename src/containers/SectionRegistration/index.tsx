@@ -3,13 +3,20 @@ import { Col } from "react-styled-flexboxgrid"
 
 import { useFormatMessages } from "../../utils/hooks"
 
-import GenerateToken from "../GenerateToken"
+import TokenForm from "../../components/TokenForm"
 import Section from "../../components/Section"
 
 import * as S from "./styled"
 
 const SectionRegistration: React.FC = () => {
   const [title] = useFormatMessages([{ id: "REGISTRATION_TITLE" }])
+
+  const handleSubmit = ({ dogname, twitter }) => {
+    localStorage.setItem('dogname', dogname)
+    localStorage.setItem('twitter', twitter)
+
+    window.location.href = '/getting-started'
+  }
 
   return (
     <Section as={S.Wrapper}>
@@ -18,7 +25,7 @@ const SectionRegistration: React.FC = () => {
           <S.Title>{title}</S.Title>
         </Col>
       </S.HeroRow>
-      <GenerateToken twitterShare />
+      <TokenForm onSubmit={handleSubmit} />
     </Section>
   )
 }

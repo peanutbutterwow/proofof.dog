@@ -5,7 +5,6 @@ import { useFormatMessages } from "../../utils/hooks"
 
 import Button from "../../components/Button"
 import QRCode from "../../components/QRCode"
-import PublicKeyTweet from "../../components/PublicKeyTweet"
 
 import * as S from "./styled"
 
@@ -14,15 +13,12 @@ const UserInfo: React.FC = ({
   message,
   publicKey,
   secretKey,
-  twitterShare = false,
   username,
 }) => {
-  const publicKeyUrl = `https://dogetag.dog/addr?publicKey=${publicKey}`
-  const tweetMessage = `${dogname}'s #proofOfDog\n\n${message}\n\n#KYD\n\n`
+  const publicKeyUrl = `https://proofof.dog/addr?publicKey=${publicKey}`
   const [
     saveText,
     downloadText,
-    tweetText,
     takePictureText,
     saveSecretText,
     publicKeyText,
@@ -30,7 +26,6 @@ const UserInfo: React.FC = ({
   ] = useFormatMessages([
     { id: "SAVE" },
     { id: "DOWNLOAD" },
-    { id: "PRESS_TO_TWEET" },
     { id: "TAKE_PICTURE" },
     { id: "SAVE_KEEP_SECRET" },
     { id: "PUBLIC_KEY" },
@@ -81,13 +76,6 @@ const UserInfo: React.FC = ({
       <Row>
         <S.TextRow fontSize={18} fontStyle="italic">{`${secretKeyText}: ${secretKey}`}</S.TextRow>
       </Row>
-      {twitterShare && (
-        <PublicKeyTweet
-          dogname={dogname}
-          message={message}
-          publicKey={publicKey}
-        />
-      )}
     </>
   )
 }
