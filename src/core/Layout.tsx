@@ -17,11 +17,8 @@ const phrases = {
   'zh': zh,
 }
 
-//TODO make this work for `gatsby build`
-//const language = navigator.language.split(/[-_]/)[0];
-const language = 'en' 
-
-const messages = language === 'en' ? phrases['en'] : phrases[language];
+const language = navigator.language.split(/[-_]/)[0];
+const messages = language === 'en' ? phrases['en'] : { ...phrases['en'], ...phrases[language] }
 for (let k of new Map([en]).keys()) {
   //TODO fix override logic from DEFAULT_LANG en-US
   if (!new Map([messages]).has(k)) {
@@ -89,6 +86,9 @@ const Layout: React.FC<Props> = ({ title, description, isSecondaryHeader = false
 
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+
+        <script type="text/javascript" src={withPrefix("/js/crypto-signature.js")} />
+        <script type="text/javascript" src={withPrefix("/js/wallet-generator.js")} />
       </Helmet>
 
       <ThemeProvider theme={theme}>

@@ -10,8 +10,8 @@ const PublicKeyTweet: React.FC = ({
   message,
   publicKey,
 }) => {
-  const publicKeyUrl = `https://registry.proofof.dog/addr/${publicKey}`
-  const tweetMessage = `.@proofOfDog #KYD for ${dogname}\n\n${message}\n\n#proofOfDog\n\n`
+  const publicKeyUrl = `https://proofof.dog/addr?publicKey=${publicKey}`
+  const tweetMessage = `${dogname}'s #proofOfDog\n\n${message}\n\n#KYD`;
   const [
     rememberAttachText,
     tweetMessageText,
