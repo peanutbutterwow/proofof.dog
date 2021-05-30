@@ -16,7 +16,11 @@ const phrases = {
   'ru': ru,
   'zh': zh,
 }
-const language = navigator.language.split(/[-_]/)[0];
+
+//TODO make this work for `gatsby build`
+//const language = navigator.language.split(/[-_]/)[0];
+const language = 'en' 
+
 const messages = language === 'en' ? phrases['en'] : phrases[language];
 for (let k of new Map([en]).keys()) {
   //TODO fix override logic from DEFAULT_LANG en-US
