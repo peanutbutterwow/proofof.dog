@@ -1,6 +1,6 @@
 export default {
   //ABOUT_TITLE: "<span>Instant</br>Bank Account<br/>for your Dog</span>",
-  ABOUT_TITLE: "<span>Financial<br/>Freedom<br/>for all Dogs</span>",
+  ABOUT_TITLE: "<span>狗狗们的<br/>财务<br/>自由</span>",
   LEAD_BUTTON_TEXT_1: "Let’s Wow",
   LEAD_BUTTON_TEXT_2: "Start Now",
   ABOUT_TEXT_LEAD: " ",
